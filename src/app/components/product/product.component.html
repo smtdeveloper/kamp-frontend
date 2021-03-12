@@ -3,17 +3,17 @@
   <span class="visually-hidden">Loading...</span>
 </div>
 
-<TABle *ngIf="dataLoaded != false" class="table">
+<TABle *ngIf="dataLoaded != false" class="table table-primary">
   <thead>
-    <tr>
-      <th>Id</th>
+    <tr class=" table table-success">
+      <th>#</th>
       <th>Ürün Adı</th>
       <th>Kategori</th>
       <th>Fiyat</th>
       <th>Stok Adedi</th>
     </tr>
   </thead>
-  <TR *ngFor="let item of products">
+  <TR *ngFor="let item of products" >
     <td>{{ item.productId }}</td>
     <td>{{ item.productName }}</td>
     <td>{{ item.categoryId }}</td>
