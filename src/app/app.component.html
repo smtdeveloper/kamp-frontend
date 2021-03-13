@@ -1,21 +1,14 @@
-
 <div class="container">
+  <app-navi></app-navi>
 
-    <app-navi></app-navi>
-
-    <div class="row" >
-        <div class="col-md-3" >  
-            <app-category></app-category>
-        </div>
-        <div class="col-md-9">
-            <app-product></app-product>
-        </div>
-        
-       
+  <div class="row">
+    <div class="col-md-3">
+      <app-category></app-category>
     </div>
-   
-    
-    
-    <router-outlet></router-outlet> 
-</div>
+    <div class="col-md-9">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
 
+ 
+</div>
