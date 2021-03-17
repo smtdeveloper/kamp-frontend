@@ -8,7 +8,7 @@
   <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Arama Yap ">
 </div>
 <div *ngIf ="filterText.length>2" class="alert alert-success" >
-<h6> {{filterText}} Aradınız :)   </h6>
+<h6> {{filterText}} Bulunmadı :)   </h6>
 </div>
 
 
@@ -21,14 +21,20 @@
       <th>Fiyat</th>
       <th>Kdv'li Dahil</th>
       <th>Stok Adedi</th>
+      <th></th>
     </tr>
   </thead>
-  <TR *ngFor="let item of products | filterPipe : filterText" >
-    <td>{{ item.productId }}</td>
-    <td>{{ item.productName | uppercase }}</td>
-    <td>{{ item.categoryId }}</td>
-    <td>{{ item.unitPrice | currency }}</td>
-    <td>{{ item.unitPrice | vatAdded:18 | currency }}</td>
-    <td>{{ item.unitsInStock }}</td>
-  </TR>
+
+  <tbody>
+    <tr *ngFor="let product of products | filterPipe : filterText" >
+    <td>{{ product.productId }}</td>
+    <td>{{ product.productName | uppercase }}</td>
+    <td>{{ product.categoryId }}</td>
+    <td>{{ product.unitPrice | currency }}</td>
+    <td>{{ product.unitPrice | vatAdded:18 | currency }}</td>
+    <td>{{ product.unitsInStock }}</td>
+    <td> <button (click)="addToCart(product)" type="button" class="btn btn-success"> Sepete Ekle </button> </td>
+    </tr>
+</tbody>
+
 </TABle>
