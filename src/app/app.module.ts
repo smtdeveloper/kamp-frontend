@@ -14,13 +14,14 @@ import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 
 import {ToastrModule} from "ngx-toastr"
 import { from } from 'rxjs';
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     CategoryComponent, 
-    NaviComponent, VatAddedPipe, FilterPipePipe 
+    NaviComponent, VatAddedPipe, FilterPipePipe, CartSummaryComponent 
   ],
   imports: [
     BrowserModule,
