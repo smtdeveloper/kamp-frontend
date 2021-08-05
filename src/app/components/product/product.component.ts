@@ -3,9 +3,30 @@ import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
-
-
 import { ProductService } from 'src/app/services/product.service';
+
+// Ts eğitim
+function topla(x:number,y:number=8):number {
+  return x + y ;
+}
+
+function topla2(x:number,y?:number):number {
+  if(y){
+    return x + y ;
+  }
+  return x;
+}
+
+console.log(topla(8,));
+console.log(topla2(3))
+
+
+function davetEt(NikahMemuru:string, ...davetliler:string[]) : string {
+
+  return NikahMemuru + " " + davetliler.join(" ");
+  }
+
+  console.log(davetEt("Ahmet"+ "Samet"+ "Burak"));
 
 
 //axios , fetch 
@@ -66,5 +87,7 @@ export class ProductComponent implements OnInit {
         this.cartService.addToCart(product);
 
       }
+
+      
 
 }
