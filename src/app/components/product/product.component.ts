@@ -59,7 +59,7 @@ export class ProductComponent implements OnInit {
        this.getProducts()
      }
    })
- 
+   
   }
 
   getProducts(){
